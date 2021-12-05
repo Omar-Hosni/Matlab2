@@ -41,7 +41,7 @@ fplot(x,y,[t1 t4], 'r', 'LineWidth', 2);
 syms b3 b2 b1 b0
 y(t) = b3*t^3 + b2*t^2 + b1*t + b0;
 yd(t) = diff(y,t);
-ey = [y(t1) == py(1), y(t2) == py(2), yd(t1) == vy(1), yd(t2) == vy(t2)];
+ey = [y(t1) == py(1), y(t2) == py(2), yd(t1) == vy(1), yd(t2) == vy(2)];
 cy(t) = subs(y, [b3 b2 b1 b0], [sy.b3 sy.b2 sy.b1 sy.b0]);
 fplot(cx, cy, [t1 t2])
 
